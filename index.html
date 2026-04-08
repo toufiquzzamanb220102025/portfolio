@@ -1,0 +1,196 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Md Toufiquzzaman | Portfolio</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+<h1>Toufiquzzaman</h1>
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#portfolio">Portfolio</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<section id="home" class="hero">
+<div class="hero-text">
+<h2>Hello, I'm <span>Md Toufiquzzaman</span></h2>
+<p><span id="role">IT Student</span></p>
+<a href="#contact" class="btn">Hire Me</a>
+</div>
+<img src="profile.jpg" alt="profile">
+</section>
+
+<section id="about" class="about">
+<h2>About Me</h2>
+<div class="about-content">
+<div class="about-photo">
+<img src="profile.jpg" alt="Md Toufiquzzaman profile picture">
+<div class="photo-caption">
+<h3>Md Toufiquzzaman</h3>
+<p>ICT Student | Web Developer | SEO & Digital Marketing Enthusiast</p>
+</div>
+</div>
+<div class="about-text">
+<p>I am a dedicated ICT student with a love for designing modern, responsive web applications and delivering digital marketing results. I combine strong programming skills with SEO know-how to build projects that are both user-friendly and performance-driven.</p>
+<ul>
+<li>Passionate about C, C++, Java, and web development</li>
+<li>Experienced in SEO strategy, content optimization, and analytics</li>
+<li>Creative digital marketing thinker with campaign and growth focus</li>
+<li>Committed to continuous learning and real-world problem solving</li>
+</ul>
+</div>
+<div class="about-highlights">
+<div class="highlight"><span>🎯</span><p>Goal-oriented learner with a creative mindset.</p></div>
+<div class="highlight"><span>💡</span><p>Focused on building solutions that perform well and look great.</p></div>
+<div class="highlight"><span>🤝</span><p>Strong collaborator who adapts quickly in team environments.</p></div>
+<div class="highlight"><span>🚀</span><p>Always exploring new tools, trends, and technologies.</p></div>
+</div>
+</div>
+</section>
+
+<section id="skills" class="skills">
+<h2>Skills</h2>
+<p class="skills-intro">A blend of technical programming ability and digital marketing expertise, built to deliver strong web solutions and growth-focused campaigns.</p>
+<div class="skills-grid">
+<div class="skill">
+<div class="skill-head"><span>C</span><span>90%</span></div>
+<div class="skill-bar"><span style="width:90%"></span></div>
+</div>
+<div class="skill">
+<div class="skill-head"><span>C++</span><span>85%</span></div>
+<div class="skill-bar"><span style="width:85%"></span></div>
+</div>
+<div class="skill">
+<div class="skill-head"><span>Java</span><span>80%</span></div>
+<div class="skill-bar"><span style="width:80%"></span></div>
+</div>
+<div class="skill">
+<div class="skill-head"><span>SEO</span><span>88%</span></div>
+<div class="skill-bar"><span style="width:88%"></span></div>
+</div>
+<div class="skill">
+<div class="skill-head"><span>Digital Marketing</span><span>84%</span></div>
+<div class="skill-bar"><span style="width:84%"></span></div>
+</div>
+</div>
+</section>
+
+<section id="portfolio" class="portfolio">
+<h2>My Work</h2>
+<div class="portfolio-grid">
+<div class="project"><img src="Library Managemen Web App.png" alt="Library Management Web App"><p>Library Management Webapp</p></div>
+<div class="project"><img src="E-Commerce Platform.png" alt="E-commerce Platform"><p>E-commerce Platform</p></div>
+<div class="project"><img src="SEO Blog Writting.png" alt="SEO Optimized Blog"><p>SEO Optimized Blog</p></div>
+</div>
+</section>
+
+<section id="contact" class="contact">
+<h2>Contact Me</h2>
+<button class="contact-toggle" id="contactToggle" type="button">▼ Contact Details</button>
+<div class="contact-logos" id="contactLogos">
+<a class="contact-icon" href="tel:01627854355" title="Call me">
+<span>📞</span>
+</a>
+<a class="contact-icon" href="mailto:your.email@example.com" title="Email me">
+<span>✉️</span>
+</a>
+<a class="contact-icon" href="https://wa.me/8801627854355" title="WhatsApp" target="_blank" rel="noreferrer noopener">
+<span>💬</span>
+</a>
+<a class="contact-icon" href="https://www.facebook.com/md.toufiquzzaman.923827/" title="Facebook" target="_blank" rel="noreferrer noopener">
+<span>🔵</span>
+</a>
+<a class="contact-icon" href="https://www.instagram.com/md.toufiquzzaman007/" title="Instagram" target="_blank" rel="noreferrer noopener">
+<span>📷</span>
+</a>
+<a class="contact-icon" href="https://www.linkedin.com/in/md-toufiquzzaman-903791401/" title="LinkedIn" target="_blank" rel="noreferrer noopener">
+<span>💼</span>
+</a>
+</div>
+<form>
+<input type="text" placeholder="Your Name">
+<input type="email" placeholder="Your Email">
+<textarea rows="5" placeholder="Your Message"></textarea>
+<button class="btn">Send Message</button>
+</form>
+</section>
+
+<footer>
+<p>© 2026 Md Toufiquzzaman | All Rights Reserved</p>
+</footer>
+
+<script>
+const roles = ["IT Student", "SEO Expert", "Digital Marketing Expert"];
+const roleElement = document.getElementById('role');
+let currentIndex = 0;
+let currentChar = 0;
+let isDeleting = false;
+
+const hireButton = document.querySelector('.btn');
+
+function typeRole() {
+    const fullText = roles[currentIndex];
+
+    if (isDeleting) {
+        currentChar--;
+        roleElement.textContent = fullText.slice(0, currentChar);
+    } else {
+        currentChar++;
+        roleElement.textContent = fullText.slice(0, currentChar);
+    }
+
+    if (!isDeleting && currentChar === fullText.length) {
+        if (currentIndex === roles.length - 1) {
+            hireButton.classList.add('blink');
+        }
+        setTimeout(() => {
+            isDeleting = true;
+            hireButton.classList.remove('blink');
+            typeRole();
+        }, 1500);
+        return;
+    }
+
+    if (isDeleting && currentChar === 0) {
+        isDeleting = false;
+        currentIndex = (currentIndex + 1) % roles.length;
+        setTimeout(typeRole, 500);
+        return;
+    }
+
+    const delay = isDeleting ? 80 : 120;
+    setTimeout(typeRole, delay);
+}
+
+typeRole();
+
+// Contact toggle
+const contactToggle = document.getElementById('contactToggle');
+const contactLogos = document.getElementById('contactLogos');
+
+contactToggle.addEventListener('click', function() {
+    if (contactLogos.style.display === 'grid') {
+        contactLogos.style.display = 'none';
+        contactToggle.textContent = '▼ Contact Details';
+        contactToggle.classList.remove('active');
+    } else {
+        contactLogos.style.display = 'grid';
+        contactToggle.textContent = '▲ Contact Details';
+        contactToggle.classList.add('active');
+    }
+});
+</script>
+
+</body>
+</html>
+
+
